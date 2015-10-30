@@ -61,6 +61,7 @@
 #include <string.h>
 #include <openssl/rc4.h>
 #include <openssl/evp.h>
+#include <openssl/md5.h>
 
 char *usage[] = {
     "usage: rc4 args\n",
@@ -79,7 +80,7 @@ int main(int argc, char *argv[])
     char buf[BUFSIZ];
     int badops = 0, i;
     char **pp;
-    unsigned char md[MD5_DIGEST_LENGTH];
+	unsigned char md[MD5_DIGEST_LENGTH];
 
     argc--;
     argv++;
